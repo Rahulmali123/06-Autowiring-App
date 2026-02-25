@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!--Object Create -->
+
+	<!--setter no Autowing -->
+	
+	<!-- <bean id="dieselEngine" class="in.ashokait.DieselEngine" /> 
+		<bean id="car" class="in.ashokait.Car" autowire="no"> 
+		
+	 </bean> -->
+	<!-- <bean id="dieselEngine" class="in.ashokait.DieselEngine" /> <bean id="car" 
+		class="in.ashokait.Car"> <property name="dieselEngine" ref="dieselEngine" 
+		/> </bean> -->
+
+	<!--byName -->
+	<!-- <bean id="dieselEngine" class="in.ashokait.DieselEngine" /> <bean id="car" 
+		class="in.ashokait.Car" autowire="byName"> </bean> -->
+
+	<!--byType -->
+	<!-- <bean id="xyz" class="in.ashokait.DieselEngine" autowire-candidate="false" 
+		/> <bean id="abc" class="in.ashokait.DieselEngine" /> <bean id="car" class="in.ashokait.Car" 
+		autowire="byType"> </bean> -->
+
+	<!-- byConstructor -->
+
+ 	<bean id="xyz" class="in.ashokait.DieselEngine" autowire-candidate="false" />
+	<bean id="dieselEngine" class="in.ashokait.DieselEngine" />
+	<bean id="car" class="in.ashokait.Car" autowire="constructor">
+	</bean> 
+	
+	
+
+	<!-- <bean id="dieselEngine" class="in.ashokait.DieselEngine" /> 
+			<bean id="car" class="in.ashokait.Car"> 
+			<constructor-arg ref="dieselEngine" /> 
+		</bean> -->
+
+
+</beans>
